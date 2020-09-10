@@ -8,7 +8,8 @@ package kpo12;
 import java.util.Scanner;
 
 /**
- *
+ * Консольное приложение позволяет ввести целые числа как аргументы командной строки,
+ * подсчитать их суммы и вывести результат на консоль.
  * @author Qngdjas
  */
 public class KPO12 {
@@ -18,13 +19,14 @@ public class KPO12 {
      * @param args
      */
     public static void main(String[] args) {
+        //Ввод чисел
         String inputStr = inputString();
+        //Вывод суммы через функцию
         System.out.println(numSum(inputStr));
     }
 
     /**
      * Функция ввода данных с консоли
-     *
      * @return Возвращает строку
      */
     public static String inputString() {
@@ -36,16 +38,19 @@ public class KPO12 {
     }
 
     /**
-     *
-     * @param str
-     * @return
+     * Функция подсчета суммы
+     * @param str На вход подается строка с числами, разделенными пробелом
+     * @return Возврщает сумму поданных на вход чисел
      */
     public static int numSum(String str) {
+        //Строка делится на числа
         String[] strMass = str.split(" ");
         int sum = 0;
+        //Числа складываются по очереди
         for (int i = 0; i < strMass.length; i++) {
             sum += Integer.parseInt(strMass[i]);
         }
+        //Возврат суммы
         return sum;
     }
 }
