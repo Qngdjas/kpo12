@@ -13,6 +13,10 @@ import java.util.Scanner;
  */
 public class KPO12 {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String inputStr = inputString();
         System.out.println(numSum(inputStr));
@@ -31,6 +35,11 @@ public class KPO12 {
         return str;
     }
 
+    /**
+     *
+     * @param str
+     * @return
+     */
     public static int numSum(String str) {
         String[] strMass = str.split(" ");
         int sum = 0;
